@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('parking_slots', function (Blueprint $table) {
+            $table->id();
+            $table->string('city');
+            $table->string('sub_city');
+            $table->string('woreda');
+            $table->string('location_name');
+            $table->foreignId('agent_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->enum('status', ['available', 'unavailable'])->default('available');
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('parking_slots');
+    }
+}; 
