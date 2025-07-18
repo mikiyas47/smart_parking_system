@@ -1,0 +1,60 @@
+.checkin-management-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkin-management-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.checkin-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.checkin-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.car-checkin-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.car-checkin-button:hover {
+  background-color: #0069d9;
+}
+
+.car-checkout-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.car-checkout-button:hover {
+  background-color: #c82333;
+}
+
+.reports-button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.reports-button:hover {
+  background-color: #138496;
+}
+
+.checkin-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,79 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 350px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+
+.notification.success {
+  background-color: #28a745;
+  border-left: 4px solid #1e7e34;
+}
+
+.notification.error {
+  background-color: #dc3545;
+  border-left: 4px solid #bd2130;
+}
+
+.notification.warning {
+  background-color: #ffc107;
+  color: #212529;
+  border-left: 4px solid #d39e00;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification-message {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0 0 10px;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.notification-close:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.95;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .notification {
+    left: 15px;
+    right: 15px;
+    max-width: none;
+    width: auto;
+  }
+}

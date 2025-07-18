@@ -1,0 +1,269 @@
+/* Base Sidebar Styles */
+.car-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 94px;
+  width: 250px;
+  min-height: 87.3vh;
+  background-color: #2c3e50;
+  color: white;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Closed State */
+.car-sidebar.closed {
+  width: 70px;
+}
+
+/* Header Styles */
+.sidebar-header {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.parking-icon {
+  background-color: #3498db;
+  color: white;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-weight: bold;
+  white-space: nowrap;
+  color: white;
+  font-size: 1rem;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+/* Content Area */
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.625rem;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.9375rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 0.9375rem;
+  font-size: 1.1rem;
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+.nav-text {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 0.625rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Closed State Styles */
+.car-sidebar.closed .logo-text,
+.car-sidebar.closed .nav-text {
+  display: none;
+}
+
+.car-sidebar.closed .nav-item {
+  justify-content: center;
+  padding: 0.9375rem 0;
+}
+
+.car-sidebar.closed .nav-icon {
+  margin-right: 0;
+  font-size: 1.3rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .car-sidebar {
+    width: 200px;
+    min-height: 85vh;
+  }
+  
+  .car-sidebar.closed {
+    width: 60px;
+  }
+  
+  .nav-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-sidebar {
+    width: 70px;
+    min-height: 82vh;
+  }
+  
+  .car-sidebar:not(.closed) {
+    width: 220px;
+  }
+  
+  .logo-text,
+  .nav-text {
+    display: none;
+  }
+  
+  .car-sidebar:not(.closed) .logo-text,
+  .car-sidebar:not(.closed) .nav-text {
+    display: block;
+  }
+  
+  .nav-item {
+    padding: 1rem 0;
+    justify-content: center;
+  }
+  
+  .car-sidebar:not(.closed) .nav-item {
+    padding: 0.75rem 0.9375rem;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .car-sidebar {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    z-index: 1001;
+  }
+  
+  .car-sidebar.closed {
+    width: 100%;
+    height: 60px;
+  }
+  
+  .sidebar-header {
+    display: none;
+  }
+  
+  .sidebar-content {
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .nav-item {
+    flex-direction: column;
+    padding: 0.5rem;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-icon {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+  }
+  
+  .nav-text {
+    font-size: 0.7rem;
+    display: block;
+  }
+  
+  .sidebar-footer {
+    display: none;
+  }
+  
+  /* Special handling for mobile closed state */
+  .car-sidebar.closed .nav-text {
+    display: none;
+  }
+  
+  .car-sidebar.closed .nav-item {
+    padding: 0.5rem;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .car-sidebar {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .car-sidebar {
+    border-right: 2px solid white;
+  }
+  
+  .nav-item.active {
+    outline: 2px solid white;
+  }
+}

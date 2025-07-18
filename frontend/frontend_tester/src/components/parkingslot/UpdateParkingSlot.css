@@ -1,0 +1,236 @@
+.update-parking-slot-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.update-parking-slot-container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.update-parking-slot-container h3 {
+  color: #3498db;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Search Method Section */
+.search-method-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.search-method-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.search-method-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.search-method-options label:hover {
+  background-color: #e9f7fe;
+  border-color: #3498db;
+}
+
+.search-method-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Search Form Section */
+.search-form-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Search Results Section */
+.search-results-section {
+  margin-bottom: 30px;
+}
+
+.parking-slot-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.parking-slot-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.parking-slot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.parking-slot-card.selected {
+  border: 2px solid #3498db;
+  background-color: #ecf7fe;
+}
+
+.parking-slot-card h4 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.parking-slot-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.parking-slot-card .select-button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.parking-slot-card .select-button:hover {
+  background-color: #2980b9;
+}
+
+.status-available {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.status-unavailable {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Update Form Section */
+.update-form-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Updated Info Section */
+.updated-info-section {
+  margin-top: 30px;
+}
+
+.updated-info-card {
+  background-color: #e8f8f5;
+  border: 1px solid #27ae60;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.updated-info-card h4 {
+  color: #27ae60;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #a3e4d7;
+  padding-bottom: 10px;
+}
+
+.updated-info-card p {
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error-message {
+  color: #e74c3c;
+  background-color: #fde9e7;
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #27ae60;
+  background-color: #e8f8f5;
+  border: 1px solid #27ae60;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}

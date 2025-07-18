@@ -1,0 +1,30 @@
+/* CarManagement Component Specific Styling */
+/* This complements the shared ParkingManagement.css */
+
+/* Custom styles specific to Car Management section */
+.content-header h1 {
+  color: #e74c3c; /* Red color specific to Car Management */
+}
+
+/* Car-specific tab styling */
+.tabs-navigation button {
+  font-size: 1.05rem;
+}
+
+/* Car management specific content styling */
+.content-body {
+  background-color: #fcfcfc;
+}
+
+/* Car-specific footer styling */
+.content-footer {
+  font-style: italic;
+}
+
+/* Responsive car management layout */
+@media (max-width: 768px) {
+  .tabs-navigation button {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}

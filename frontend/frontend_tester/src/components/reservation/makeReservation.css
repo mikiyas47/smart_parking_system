@@ -1,0 +1,186 @@
+/* Payment Confirmation Modal */
+.payment-confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-confirmation-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.payment-confirmation-content h2 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.payment-details {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.payment-details p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirm-payment-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.confirm-payment-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.cancel-payment-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.cancel-payment-button:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.confirm-payment-button:disabled,
+.cancel-payment-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.payment-success {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.reservation-price-display {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Price Summary (Card) */
+.price-summary {
+  margin: 24px auto 0 auto;
+  max-width: 360px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.price-summary h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #343a40;
+  text-align: center;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem; /* 18px */
+  color: #495057;
+}
+
+.price-row span:last-child {
+  font-weight: 700;
+  color: #28a745; /* success green */
+}
+
+.reservation-success .reservation-details,
+.reservation-success .success-card .btn {
+  display: none;
+}
+
+/* Slot grid */
+.slots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Individual slot */
+.slot {
+  padding: 12px 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 90px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+/* Slot status colors */
+.slot.free {
+  background-color: #f8f9fa;
+}
+
+.slot.reserved {
+  background-color: #ffc10733;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.slot.occupied {
+  background-color: #dc354533;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Hover effect for selectable slots */
+.slot.free:hover {
+  background-color: #e2e6ea;
+}
+
+/* Selected slot styles */
+.slot.selected {
+  border-color: #007bff;
+  background-color: #007bff;
+  color: #fff;
+}

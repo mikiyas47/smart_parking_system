@@ -1,0 +1,55 @@
+.today-checkins-widget {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Only apply these styles when the widget is NOT inside a stat-card */
+.today-checkins-widget:not(.stat-card .today-checkins-widget) {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.today-checkins-widget h3 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.today-checkins-widget .loading {
+  color: #888;
+  font-style: italic;
+}
+
+.today-checkins-widget .error {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+.today-checkins-widget .count-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.today-checkins-widget .count {
+  font-size: 42px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 5px;
+}
+
+.today-checkins-widget .label {
+  color: #666;
+  font-size: 14px;
+}
